@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 export const Navbar = () => {
   return (
-    <NavigationMenu className="w-full min-w-full max-h-fit flex justify-between px-4 py-2 items-center bg-background ">
+    <NavigationMenu className="sticky top-0 z-100 w-full min-w-full max-h-fit flex justify-between px-4 py-2 items-center bg-background shadow-lg backdrop-blur-xl">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink
@@ -26,51 +26,51 @@ export const Navbar = () => {
         </NavigationMenuItem>
       </NavigationMenuList>
       <NavigationMenuList>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-0">
           <NavigationMenuLink
             asChild
-            className={navigationMenuTriggerStyle()}>
+            className={`  ${navigationMenuTriggerStyle()}  px-1 sm:px-3  lg:px-4   `}>
             <Link href="/projects">
-              <span className=" text-2xl font-mono ">
+              <span className="  md:text-2xl font-mono  text-xs sm:text-lg">
                 PROJECTS
               </span>
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-0">
           <NavigationMenuLink
             asChild
-            className={navigationMenuTriggerStyle()}>
+            className={`  ${navigationMenuTriggerStyle()}  px-1 sm:px-3  lg:px-4   `}>
             <Link href="/About">
-              <span className=" text-2xl font-mono">
+              <span className=" md:text-2xl font-mono text-xs sm:text-lg">
                 ABOUT
               </span>
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-0">
           <NavigationMenuLink
             asChild
-            className={navigationMenuTriggerStyle()}>
+            className={`  ${navigationMenuTriggerStyle()}  px-1 sm:px-3  lg:px-4   `}>
             <Link href="/github">
-              <span className=" text-2xl font-mono">
+              <span className=" md:text-2xl font-mono text-xs sm:text-lg">
                 GITHUB
               </span>
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-0">
           <NavigationMenuLink
             asChild
-            className={navigationMenuTriggerStyle()}>
+            className={`  ${navigationMenuTriggerStyle()}  px-1 sm:px-3  lg:px-4   `}>
             <Link href="/contact">
-              <span className=" text-2xl font-mono">
+              <span className=" md:text-2xl font-mono text-xs sm:text-lg">
                 CONTACT
               </span>
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-0">
           <DarkModeToggle />
         </NavigationMenuItem>
       </NavigationMenuList>

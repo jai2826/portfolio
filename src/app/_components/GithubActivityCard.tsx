@@ -1,18 +1,13 @@
-import { GitHubActivity } from "@/app/_components/github-calendar-wrapper";
+import ContributionCalendar from "@/app/_components/GitHubCalendar";
 
 export default function GithubContribution() {
   return (
-    <div
-      style={{
-        padding: "20px",
-        background: "#0d1117",
-        borderRadius: "10px",
-      }}>
-      <h2 style={{ color: "white" }}>
+    <div className="w-full flex flex-col">
+      {" "}
+      <h2 className="text-xl font-semibold">
         My GitHub Contributions
       </h2>
-
-      <GitHubActivity />
+      <ContributionCalendar username="jai2826" />
     </div>
   );
 }

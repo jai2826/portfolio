@@ -213,23 +213,17 @@
 }
 
 @layer utilities {
-  /* Force the calendar to be responsive */
-  .react-activity-calendar {
-    width: 100% !important;
-    max-width: 100% !important;
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 6px;
   }
-
-  .react-activity-calendar svg {
-    width: 100% !important;
-    height: auto !important;
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #0d1117;
   }
-
-  /* Hide scrollbars but allow swiping on mobile */
-  .scrollbar-hide {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 10px;
   }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #39d353;
   }
 }
