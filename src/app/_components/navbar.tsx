@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 export const Navbar = () => {
   return (
-    <NavigationMenu className="sticky top-0 z-100 w-full min-w-full max-h-fit flex justify-between px-4 py-2 items-center bg-background shadow-lg backdrop-blur-xl">
+    <NavigationMenu className="sticky top-0 z-100 w-full min-w-full max-h-fit flex justify-between px-4 py-2 items-center bg-background shadow-lg backdrop-blur-xl rounded-xl">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink
@@ -37,11 +37,12 @@ export const Navbar = () => {
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
+        
         <NavigationMenuItem className="px-0">
           <NavigationMenuLink
             asChild
             className={`  ${navigationMenuTriggerStyle()}  px-1 sm:px-3  lg:px-4   `}>
-            <Link href="/About">
+            <Link href="/about">
               <span className=" md:text-2xl font-mono text-xs sm:text-lg">
                 ABOUT
               </span>

@@ -29,9 +29,9 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-200 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-200 h-full w-full max-w-7xl mx-auto items-start  flex flex-col`}>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-200 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-200 h-full w-full max-w-9xl mx-auto items-start  flex flex-col`}>
         <ThemeProvider
-        
+          
           attribute="class"
           defaultTheme="dark"
           enableSystem

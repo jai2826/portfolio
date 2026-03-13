@@ -90,16 +90,19 @@ const ContributionCalendar = ({
           className="overflow-x-auto w-full">
           <div className=" w-full">
             {/* Month labels */}
-            <div className="flex mb-1">
+            <div className="flex mb-1 gap-[3px] md:gap-[5px]">
               {grid.map((week, i) => {
-                const first = week[0];
-                const showMonth = first.day <= 7;
+                const firstDayOfMonth = week.find(
+                  (day) => day.day === 1,
+                );
 
                 return (
                   <div
                     key={i}
-                    className="w-[14px] text-[10px] text-zinc-500 flex-shrink-0">
-                    {showMonth ? months[first.month] : ""}
+                    className="w-[11px] md:w-[14px] text-[10px] text-zinc-500 flex-shrink-0">
+                    {firstDayOfMonth
+                      ? months[firstDayOfMonth.month]
+                      : ""}
                   </div>
                 );
               })}

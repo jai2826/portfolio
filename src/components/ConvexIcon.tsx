@@ -1,17 +1,24 @@
+// components/ConvexIcon.tsx
+import React from "react";
+
 export const ConvexIcon = ({
   className,
+  size = 24,
   ...props
 }: {
   className?: string;
+  size?: number | string;
 } & React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      // Removing fixed size attributes to allow className to take over
-      className={className}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
+      width={size}
+      height={size}
       viewBox="31 31.5 122 125"
-      {...props}>
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      {...props}
+    >
       <path
         d="M108.092 130.021C126.258 128.003 143.385 118.323 152.815 102.167C148.349 142.128 104.653 167.385 68.9858 151.878C65.6992 150.453 62.8702 148.082 60.9288 145.034C52.9134 132.448 50.2786 116.433 54.0644 101.899C64.881 120.567 86.8748 132.01 108.092 130.021Z"
         fill="#F3B01C"

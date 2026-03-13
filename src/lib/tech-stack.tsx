@@ -1,4 +1,4 @@
-import { ConvexIcon } from "@/lib/ConvexIcon";
+import { ConvexIcon } from "@/components/ConvexIcon";
 import { DiMongodb } from "react-icons/di";
 import {
   FaGitAlt,
@@ -78,7 +78,9 @@ export const Stack = [
   },
   {
     name: "Convex",
-    Icon: <ConvexIcon className="size-5 sm:size-6 md:size-7"/>,
+    Icon: (
+      <ConvexIcon className="size-5 sm:size-6 md:size-7" />
+    ),
     description:
       "A serverless backend for modern applications.",
   },

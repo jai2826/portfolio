@@ -2,10 +2,11 @@ import GithubContribution from "@/app/_components/GithubActivityCard";
 import { ArrowRightIcon, MapPinIcon } from "lucide-react";
 import Image from "next/image";
 import { TechStack } from "@/app/_components/TechStack";
+import FeaturedProject from "@/app/_components/FeaturedProject";
 
 export const HomeHero = () => {
   return (
-    <div className=" px-2  py-6 w-full flex flex-col  gap-2 items-stretch">
+    <div className=" py-4 w-full min-h-screen flex flex-col gap-2 items-stretch">
       <div className="w-full flex flex-col lg:flex-row gap-2 items-stretch">
         <div className="lg:w-fit min-w-fit  flex items-center justify-center space-x-5 p-6 bg-background border  rounded-3xl">
           <div className="relative w-32 h-32 md:w-48 md:h-48 lg:w-52 lg:h-50 aspect-square">
@@ -56,8 +57,14 @@ export const HomeHero = () => {
           <GithubContribution />
         </div>
       </div>
-      <div className="p-6 w-full h-full flex flex-col gap-4 bg-background rounded-3xl">
-        <TechStack />
+      <div className="w-full  flex-1 flex flex-col lg:flex-row gap-2 items-stretch">
+        {/* Added flex-1 above ^ to force this row to take up remaining screen space */}
+        <div className="p-6 flex-1 bg-background rounded-3xl border min-h-[300px]">
+          <TechStack />
+        </div>
+        <div className="p-6  bg-background rounded-3xl border min-h-[300px]">
+          <FeaturedProject />
+        </div>
       </div>
     </div>
   );
