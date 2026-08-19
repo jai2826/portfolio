@@ -1,0 +1,75 @@
+[
+  {
+    "id": "fynco",
+    "title": "Fynco",
+    "tagline": "SaaS Task Management Platform",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Appwrite",
+      "Hono",
+      "TanStack Query",
+      "Shadcn UI",
+      "Tailwind CSS"
+    ],
+    "bullets": [
+      "Developed a scalable SaaS task management platform using Next.js, TypeScript, Appwrite, Hono, and TanStack Query",
+      "Implemented Kanban, Calendar, and Table views with real-time synchronization and optimized state management",
+      "Built reusable UI components using React, Tailwind CSS, and shadcn/ui, improving maintainability",
+      "Integrated REST APIs and optimized client-side caching for faster data retrieval",
+      "Improved application performance through efficient rendering and optimized API requests"
+    ],
+    "links": [
+      {
+        "label": "Live Dashboard",
+        "url": "#"
+      },
+      {
+        "label": "GitHub",
+        "url": "#"
+      }
+    ],
+    "order": 1,
+    "featured": true,
+    "createdAt": "2026-08-20T00:00:00.000Z",
+    "updatedAt": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "trellis",
+    "title": "Trellis",
+    "tagline": "AI-Driven Customer Support Bot",
+    "technologies": [
+      "Next.js",
+      "Vapi",
+      "Vercel AI SDK",
+      "Convex",
+      "Monorepo",
+      "Shadcn UI",
+      "RAG"
+    ],
+    "bullets": [
+      "Implemented Retrieval-Augmented Generation (RAG) using embeddings for contextual AI responses",
+      "Built reusable chatbot widgets with secure cross-origin embedding",
+      "Integrated voice AI using Vapi and AI SDK",
+      "Designed a multi-tenant dashboard for organization-level bot management"
+    ],
+    "links": [
+      {
+        "label": "Live Dashboard",
+        "url": "https://trellis-web-kappa.vercel.app/"
+      },
+      {
+        "label": "Widget Demo",
+        "url": "#"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/jai2826/trellis"
+      }
+    ],
+    "order": 2,
+    "featured": true,
+    "createdAt": "2026-08-20T00:00:00.000Z",
+    "updatedAt": "2026-08-20T00:00:00.000Z"
+  }
+]
