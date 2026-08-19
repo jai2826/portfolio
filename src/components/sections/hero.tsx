@@ -21,13 +21,13 @@ export function Hero() {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             {/* Status Badge */}
             <div 
-              className={`inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-mono text-[#00D9FF] bg-[#00D9FF]/10 border border-[#00D9FF]/30 mb-6 backdrop-blur-md shadow-[0_0_15px_rgba(0,217,255,0.12)] transition-all duration-700 ease-out transform ${
+              className={`inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-mono text-neon bg-neon/10 border border-neon/30 mb-6 backdrop-blur-md shadow-[0_0_15px_rgba(0,217,255,0.12)] transition-all duration-700 ease-out transform ${
                 mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00D9FF] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00D9FF]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-neon"></span>
               </span>
               <span>Available for SaaS & AI Engineering</span>
             </div>
@@ -47,7 +47,7 @@ export function Hero() {
                 mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              Full-stack developer shipping <span className="text-[#00D9FF] font-semibold">real-time SaaS</span> and <span className="text-[#38BDF8] font-semibold">RAG-powered AI</span> products.
+              Full-stack developer shipping <span className="text-neon font-semibold">real-time SaaS</span> and <span className="text-neon-glow font-semibold">RAG-powered AI</span> products.
             </p>
             
             {/* Supporting Line */}

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { AnimatedSection } from '@/components/ui/animated-section';
 import { useTilt } from '@/hooks/use-tilt';
 import { Project } from '@/types/project';
+import initialProjectsData from '@/data/projects.json';
 
 const ExternalLinkIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -12,45 +13,6 @@ const ExternalLinkIcon = () => (
     <line x1="10" y1="14" x2="21" y2="3"></line>
   </svg>
 );
-
-const DEFAULT_PROJECTS: Project[] = [
-  {
-    id: 'fynco',
-    title: 'Fynco',
-    tagline: 'SaaS Task Management Platform',
-    technologies: ['Next.js', 'TypeScript', 'Appwrite', 'Hono', 'TanStack Query', 'Shadcn UI', 'Tailwind CSS'],
-    bullets: [
-      'Developed a scalable SaaS task management platform using Next.js, TypeScript, Appwrite, Hono, and TanStack Query',
-      'Implemented Kanban, Calendar, and Table views with real-time synchronization and optimized state management',
-      'Built reusable UI components using React, Tailwind CSS, and shadcn/ui, improving maintainability',
-      'Integrated REST APIs and optimized client-side caching for faster data retrieval',
-      'Improved application performance through efficient rendering and optimized API requests',
-    ],
-    links: [
-      { label: 'Live Dashboard', url: '#' },
-      { label: 'GitHub', url: '#' },
-    ],
-    order: 1,
-  },
-  {
-    id: 'trellis',
-    title: 'Trellis',
-    tagline: 'AI-Driven Customer Support Bot',
-    technologies: ['Next.js', 'Vapi', 'Vercel AI SDK', 'Convex', 'Monorepo', 'Shadcn UI', 'RAG'],
-    bullets: [
-      'Implemented Retrieval-Augmented Generation (RAG) using embeddings for contextual AI responses',
-      'Built reusable chatbot widgets with secure cross-origin embedding',
-      'Integrated voice AI using Vapi and AI SDK',
-      'Designed a multi-tenant dashboard for organization-level bot management',
-    ],
-    links: [
-      { label: 'Live Dashboard', url: 'https://trellis-web-kappa.vercel.app/' },
-      { label: 'Widget Demo', url: '#' },
-      { label: 'GitHub', url: 'https://github.com/jai2826/trellis' },
-    ],
-    order: 2,
-  },
-];
 
 function ProjectCard({ project }: { project: Project }) {
   const { ref, style } = useTilt(7);
@@ -63,7 +25,7 @@ function ProjectCard({ project }: { project: Project }) {
     >
       <div style={{ transform: 'translateZ(20px)' }}>
         <h3 className="text-2xl font-bold text-zinc-50">{project.title}</h3>
-        <p className="text-[#00D9FF] text-sm font-mono mt-1">{project.tagline}</p>
+        <p className="text-neon text-sm font-mono mt-1">{project.tagline}</p>
         
         {project.technologies && project.technologies.length > 0 && (
           <div className="flex flex-wrap mt-4 gap-2">
@@ -82,7 +44,7 @@ function ProjectCard({ project }: { project: Project }) {
           <ul className="mt-6 space-y-3">
             {project.bullets.map((bullet, i) => (
               <li key={i} className="flex items-start gap-2.5">
-                <span className="text-[#00D9FF] mt-1 text-xs shrink-0">◆</span>
+                <span className="text-neon mt-1 text-xs shrink-0">◆</span>
                 <span className="text-sm text-zinc-400 leading-relaxed">{bullet}</span>
               </li>
             ))}
@@ -111,7 +73,7 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 export function Projects({ initialProjects }: { initialProjects?: Project[] }) {
-  const [projects, setProjects] = useState<Project[]>(initialProjects || DEFAULT_PROJECTS);
+  const [projects, setProjects] = useState<Project[]>(initialProjects || (initialProjectsData as unknown as Project[]));
 
   useEffect(() => {
     let isSubscribed = true;

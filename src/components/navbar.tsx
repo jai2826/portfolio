@@ -87,7 +87,7 @@ export function Navbar() {
               href="https://www.linkedin.com/in/jai-lakhmani/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-zinc-400 hover:text-neonsition-colors p-1"
+              className="text-zinc-400 hover:text-neon transition-colors p-1"
               aria-label="LinkedIn"
             >
               <LinkedinIcon />
@@ -134,7 +134,7 @@ export function Navbar() {
             })}
             <div className="flex items-center space-x-6 pt-4 border-t border-zinc-800">
               <a 
-                href="#" 
+                href="https://github.com/jai2826" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-zinc-400 hover:text-neon transition-colors"
@@ -143,7 +143,7 @@ export function Navbar() {
                 <GithubIcon />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/jai-lakhmani/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-zinc-400 hover:text-neon transition-colors"

@@ -8,7 +8,7 @@ export function Footer() {
           © {new Date().getFullYear()} Jai Lakhmani. All rights reserved.
         </p>
         <div className="flex items-center gap-4 text-xs font-mono text-zinc-600">
-          <Link href="/admin" className="hover:text-[#00D9FF] transition-colors flex items-center gap-1">
+          <Link href="/admin" className="hover:text-neon transition-colors flex items-center gap-1">
             <span>●</span>
             <span>Studio Dashboard</span>
           </Link>
