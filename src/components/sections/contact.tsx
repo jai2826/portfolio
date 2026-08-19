@@ -1,11 +1,42 @@
+'use client';
+
 import { AnimatedSection } from "@/components/ui/animated-section";
-import {
-  CopyIcon,
-  MoveUpLeftIcon,
-  MoveUpRightIcon,
-} from "lucide-react";
+import { Check, Copy, Loader2 } from "lucide-react";
+import { useState } from "react";
+
+type CopyState = 'idle' | 'copying' | 'done';
 
 export function Contact() {
+  const [copyState, setCopyState] = useState<CopyState>('idle');
+
+  const handleCopy = () => {
+    if (copyState !== 'idle') return;
+
+    const email = "jailakhmani12345@gmail.com";
+    setCopyState('copying');
+
+    const finish = () => {
+      setCopyState('done');
+      setTimeout(() => setCopyState('idle'), 2000);
+    };
+
+    const fallbackCopy = () => {
+      // `execCommand('copy')` is deprecated; prompt provides a safe manual fallback.
+      window.prompt('Copy this email address:', email);
+      setTimeout(finish, 400);
+    };
+
+    // Modern clipboard API
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email)
+        .then(() => setTimeout(finish, 400))
+        .catch(() => fallbackCopy());
+    } else {
+      // Fallback for browsers without clipboard API
+      fallbackCopy();
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -23,14 +54,19 @@ export function Contact() {
             </p>
 
             <button
-              onClick={() =>
-                navigator.clipboard.writeText(
-                  "jailakhmani12345@gmail.com",
-                )
-              }
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-neon-cta hover:bg-[#2563EB] px-8 py-4 text-base font-medium text-white shadow-[0_0_25px_rgba(56,189,248,0.25)] hover:shadow-[0_0_35px_rgba(0,217,255,0.4)] transition-all mb-10 font-sans hover:scale-[1.02] active:scale-[0.98]">
+              onClick={handleCopy}
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-neon-cta hover:bg-[#2563EB] px-8 py-4 text-base font-medium text-white shadow-[0_0_25px_rgba(56,189,248,0.25)] hover:shadow-[0_0_35px_rgba(0,217,255,0.4)] transition-all mb-10 font-sans hover:scale-[1.02] active:scale-[0.98]"
+            >
               <span>jailakhmani12345@gmail.com</span>
-              <CopyIcon />
+              {copyState === 'copying' && (
+                <Loader2 size={18} className="animate-spin" />
+              )}
+              {copyState === 'done' && (
+                <Check size={22} className="text-green-400" />
+              )}
+              {copyState === 'idle' && (
+                <Copy size={18} />
+              )}
             </button>
 
             <div className="flex items-center justify-center gap-6">
@@ -38,7 +74,7 @@ export function Contact() {
                 href="https://github.com/jai2826"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-400 p-2 hover:text-neon hover:scale-110 transition-all  rounded-lg bg-zinc-900/60 border border-zinc-800 hover:border-neon-glow/40"
+                className="text-zinc-400 p-2 hover:text-neon hover:scale-110 transition-all rounded-lg bg-zinc-900/60 border border-zinc-800 hover:border-neon-glow/40"
                 aria-label="GitHub">
                 <svg
                   width="22"
@@ -68,21 +104,12 @@ export function Contact() {
                   strokeLinecap="round"
                   strokeLinejoin="round">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect
-                    width="4"
-                    height="12"
-                    x="2"
-                    y="9"></rect>
-                  <circle
-                    cx="4"
-                    cy="4"
-                    r="2"></circle>
+                  <rect width="4" height="12" x="2" y="9"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
                 </svg>
               </a>
               <a
                 href="mailto:jailakhmani12345@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="text-zinc-400 hover:text-neon hover:scale-110 transition-all p-2 rounded-lg bg-zinc-900/60 border border-zinc-800 hover:border-neon-glow/40"
                 aria-label="Email">
                 <svg
@@ -94,12 +121,7 @@ export function Contact() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round">
-                  <rect
-                    width="20"
-                    height="16"
-                    x="2"
-                    y="4"
-                    rx="2"></rect>
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </svg>
               </a>

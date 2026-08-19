@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useMemo, type RefObject } from 'react';
+import { useRef, useMemo, useEffect, type RefObject } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { DeviceTier } from '@/lib/device-capability';
@@ -21,6 +21,19 @@ export default function FullPageUniverse({
   mouseRef,
 }: FullPageUniverseProps) {
   const masterGroupRef = useRef<THREE.Group>(null);
+  const timerRef = useRef<THREE.Timer | null>(null);
+
+  useEffect(() => {
+    const timer = new THREE.Timer();
+    if (typeof document !== 'undefined') {
+      timer.connect(document);
+    }
+    timerRef.current = timer;
+
+    return () => {
+      timer.dispose();
+    };
+  }, []);
 
   // Section 1: Hero Quantum Prism refs
   const heroGroupRef = useRef<THREE.Group>(null);
@@ -109,8 +122,11 @@ export default function FullPageUniverse({
     return nodes;
   }, []);
 
-  useFrame((state, delta) => {
-    const time = state.clock.getElapsedTime();
+  useFrame((_, delta) => {
+    if (timerRef.current) {
+      timerRef.current.update();
+    }
+    const time = timerRef.current ? timerRef.current.getElapsed() : performance.now() * 0.001;
     const speed = reducedMotion ? 0.2 : 1.0;
 
     const mouse = mouseRef.current;
