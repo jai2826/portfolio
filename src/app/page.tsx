@@ -6,6 +6,8 @@ import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
+import { Experience } from "@/components/sections/experience";
+import { SmartlyInfra } from "@/components/sections/smartly-infra";
 import { Projects } from "@/components/sections/projects";
 import { Skills } from "@/components/sections/skills";
 import { Contact } from "@/components/sections/contact";
@@ -36,6 +38,8 @@ export default function Home() {
         <main className="relative z-10 flex flex-col">
           <Hero />
           <About />
+          <Experience />
+          <SmartlyInfra />
           <Projects />
           <Skills />
           <Contact />

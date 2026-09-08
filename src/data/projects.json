@@ -1,5 +1,42 @@
 [
   {
+    "id": "infragen",
+    "title": "Infragen",
+    "tagline": "Autonomous DevOps & Kubernetes AI Agent",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Docker",
+      "Kubernetes",
+      "Gemini AI",
+      "Prisma",
+      "PostgreSQL",
+      "SSE",
+      "Tailwind CSS"
+    ],
+    "bullets": [
+      "Developed an autonomous AI agent translating natural-language app descriptions into production-grade Dockerfiles & Kubernetes manifests",
+      "Orchestrated a 4-phase state-machine pipeline (Parse, Multi-Generate, Validate, Cost Estimate) powered by Google Gemini",
+      "Engineered a deterministic self-healing validation loop that detects security flaws and unpinned images, automatically auto-fixing configs",
+      "Integrated real-time Server-Sent Events (SSE) streaming for live lifecycle updates with interactive Monaco Editor previews",
+      "Formulated itemized monthly cloud cost estimates ($/mo) covering CPU, memory, storage, and cluster control plane resources"
+    ],
+    "links": [
+      {
+        "label": "Live Demo",
+        "url": "https://infragen-theta.vercel.app/"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/jai2826/infragen"
+      }
+    ],
+    "order": 1,
+    "featured": true,
+    "createdAt": "2026-08-20T00:00:00.000Z",
+    "updatedAt": "2026-08-20T00:00:00.000Z"
+  },
+  {
     "id": "fynco",
     "title": "Fynco",
     "tagline": "SaaS Task Management Platform",
@@ -29,7 +66,7 @@
         "url": "https://github.com/jai2826/fynco"
       }
     ],
-    "order": 1,
+    "order": 2,
     "featured": true,
     "createdAt": "2026-08-20T00:00:00.000Z",
     "updatedAt": "2026-08-20T00:00:00.000Z"
@@ -67,7 +104,7 @@
         "url": "https://github.com/jai2826/trellis"
       }
     ],
-    "order": 2,
+    "order": 3,
     "featured": true,
     "createdAt": "2026-08-20T00:00:00.000Z",
     "updatedAt": "2026-08-20T00:00:00.000Z"

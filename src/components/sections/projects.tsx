@@ -21,7 +21,7 @@ function ProjectCard({ project }: { project: Project }) {
     <div 
       ref={ref}
       style={{ ...style, transformStyle: 'preserve-3d' }}
-      className="rounded-xl border border-zinc-800/80 bg-[#0a0a0a]/80 backdrop-blur-md p-6 md:p-8 transition-all duration-300 hover:border-[#38BDF8]/40 hover:shadow-[0_0_30px_rgba(56,189,248,0.12)] flex flex-col justify-between"
+      className="rounded-xl border border-zinc-800/80 bg-[#0a0a0a]/80 backdrop-blur-md p-6 md:p-8 transition-all duration-300 hover:border-[#38BDF8]/40 hover:shadow-[0_0_30px_rgba(56,189,248,0.12)] flex flex-col justify-between h-full"
     >
       <div style={{ transform: 'translateZ(20px)' }}>
         <h3 className="text-2xl font-bold text-zinc-50">{project.title}</h3>
@@ -107,7 +107,7 @@ export function Projects({ initialProjects }: { initialProjects?: Project[] }) {
             <h2 className="text-3xl md:text-4xl font-bold text-zinc-50">Projects</h2>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}

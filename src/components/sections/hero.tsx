@@ -47,7 +47,7 @@ export function Hero() {
                 mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              Full-stack developer shipping <span className="text-neon font-semibold">real-time SaaS</span> and <span className="text-neon-glow font-semibold">RAG-powered AI</span> products.
+              Full Stack AI Engineer shipping <span className="text-neon font-semibold">real-time SaaS</span> and <span className="text-neon-glow font-semibold">RAG-powered AI</span> products.
             </p>
             
             {/* Supporting Line */}

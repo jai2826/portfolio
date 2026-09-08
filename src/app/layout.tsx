@@ -13,10 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jai Lakhmani — Full-Stack Developer",
-  description: "Full-stack developer shipping real-time SaaS and RAG-powered AI products with Next.js, real-time systems, and AI integrations.",
+  title: "Jai Lakhmani — Full Stack AI Engineer",
+  description: "Full Stack AI Engineer shipping real-time SaaS and RAG-powered AI products with Next.js, real-time systems, and AI integrations.",
   keywords: [
     "Jai Lakhmani",
+    "Full Stack AI Engineer",
     "Full-Stack Developer",
     "Next.js",
     "React",

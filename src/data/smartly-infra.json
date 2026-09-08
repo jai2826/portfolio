@@ -1,0 +1,84 @@
+{
+  "profileUrl": "https://infra.smartlylabs.ai/profile/cmt1wnpn8012z04juymq8uxsr",
+  "name": "Jai Lakhmani",
+  "location": "Bangalore",
+  "track": "Hybrid Intelligence Track",
+  "stats": [
+    {
+      "label": "Total Score",
+      "value": 408,
+      "suffix": " pts",
+      "change": "+222 this wk"
+    },
+    {
+      "label": "City Rank",
+      "value": 5,
+      "prefix": "#",
+      "detail": "Bangalore"
+    },
+    {
+      "label": "Global Rank",
+      "value": 152,
+      "prefix": "#",
+      "detail": "Worldwide"
+    },
+    {
+      "label": "Accepted Work",
+      "value": 15,
+      "suffix": " tasks",
+      "detail": "Agent Tuning"
+    },
+    {
+      "label": "Deployed Agents",
+      "value": 3,
+      "suffix": " live",
+      "detail": "Public"
+    },
+    {
+      "label": "Active Streak",
+      "value": 4,
+      "suffix": " days",
+      "detail": "Consistent"
+    }
+  ],
+  "trophies": [
+    {
+      "title": "Agent Tuner",
+      "category": "Intelligence",
+      "icon": "spark"
+    },
+    {
+      "title": "First Feedback",
+      "category": "Feedback",
+      "icon": "heart"
+    },
+    {
+      "title": "First Deploy",
+      "category": "Progress",
+      "icon": "rocket"
+    }
+  ],
+  "agents": [
+    {
+      "name": "WeekWise",
+      "type": "Data Collector",
+      "version": "v1",
+      "date": "Sep 2026",
+      "description": "Converts course syllabi into realistic, prioritized week-by-week study plans based on topic weightage and deadlines without inventing dates or weights."
+    },
+    {
+      "name": "Meeting Notes",
+      "type": "Data Collector",
+      "version": "v1",
+      "date": "Sep 2026",
+      "description": "Transforms unstructured meeting transcripts into decision logs, categorized action items with owners and deadlines, and executive summaries."
+    },
+    {
+      "name": "Law Lens",
+      "type": "Regulatory Research",
+      "version": "v4",
+      "date": "Aug 2026",
+      "description": "Researches and aggregates regulatory compliance updates (GST, labor laws, income tax) for Indian startups and SMEs into plain-English action items."
+    }
+  ]
+}

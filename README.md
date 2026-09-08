@@ -10,6 +10,8 @@
     <a href="#-key-features">Key Features</a> •
     <a href="#-admin-dashboard--cms">Admin Dashboard</a> •
     <a href="#-interactive-3d-universe">3D Universe</a> •
+    <a href="#-work-experience">Work Experience</a> •
+    <a href="#-smartly-infra-contributions">Smartly Infra</a> •
     <a href="#-featured-projects">Featured Projects</a> •
     <a href="#-tech-stack">Tech Stack</a> •
     <a href="#-project-structure">Project Structure</a> •
@@ -80,9 +82,47 @@ The 3D background is powered by `@react-three/fiber`, `@react-three/drei`, and `
 
 ---
 
+## 💼 Work Experience
+
+### **Full Stack AI Engineer — StudentLancer**
+> *June 2026 – August 2026*
+- **Tech Stack**: Next.js, Prisma, Better Auth, TypeScript, Full-Stack Architecture
+- **Highlights**:
+  - Architected standardized full-stack templates (Next.js, Prisma, Better Auth) reducing developer onboarding by 40%.
+  - Enabled 15+ student developers to ship production applications 3x faster.
+  - Built reusable component libraries and backend patterns adopted across 5+ projects.
+
+---
+
+## ⚡ Smartly Infra Contributions
+
+[**View Live Smartly Profile →**](https://infra.smartlylabs.ai/profile/cmt1wnpn8012z04juymq8uxsr)
+
+Active operational contributor across the **Hybrid Intelligence Track**:
+- **Total Score**: `408 pts` (`+222` weekly score)
+- **Rankings**: `#5` City Rank (Bangalore) • `#152` Global Rank
+- **Accepted Work**: `15` accepted agent tuning tasks on production evaluations
+- **Deployed Autonomous Agents**:
+  - **WeekWise (v1)**: Converts course syllabi into realistic, prioritized study plans with verified deadlines.
+  - **Meeting Notes (v1)**: Transforms unstructured transcripts into decision logs with owners and deadlines.
+  - **Law Lens (v4)**: Researches and aggregates regulatory compliance updates (GST, labor, tax) for Indian startups.
+- **Trophy Board**: ⚡ *Agent Tuner* (Intelligence) • ❤️ *First Feedback* (Feedback) • 🚀 *First Deploy* (Progress)
+
+---
+
 ## 🚀 Featured Projects
 
-### 1. **Fynco — SaaS Task Management Platform**
+### 1. **Infragen — Autonomous DevOps & Kubernetes AI Agent**
+> *AI agent engineering validated multi-stage Dockerfiles and Kubernetes manifests with cost estimation.*
+- **Tech Stack**: Next.js, TypeScript, Docker, Kubernetes, Gemini AI, Prisma, PostgreSQL, SSE, Tailwind CSS
+- **Highlights**:
+  - Autonomous infrastructure AI agent translating natural-language app descriptions into production-ready Dockerfiles and K8s manifests.
+  - Orchestrated 4-phase state-machine pipeline (Parse, Multi-Generate, Validate, Cost Estimate) powered by Google Gemini.
+  - Deterministic self-healing validation loop verifying and automatically auto-correcting configurations.
+  - Real-time Server-Sent Events (SSE) streaming for live lifecycle event tracking and Monaco Editor preview.
+  - Itemized monthly cloud cost estimates ($/mo) for CPU, memory, storage, and cluster control planes.
+
+### 2. **Fynco — SaaS Task Management Platform**
 > *Scalable, real-time multi-tenant project management platform.*
 - **Tech Stack**: Next.js, TypeScript, Appwrite, Hono, TanStack Query, shadcn/ui, Tailwind CSS
 - **Highlights**:
@@ -90,7 +130,7 @@ The 3D background is powered by `@react-three/fiber`, `@react-three/drei`, and `
   - Built high-performance REST APIs with Hono and Appwrite database indexing.
   - Multi-layer client-side caching using TanStack Query.
 
-### 2. **Trellis — AI-Driven Customer Support Bot**
+### 3. **Trellis — AI-Driven Customer Support Bot**
 > *Context-aware enterprise AI support bot with RAG and voice synthesis.*
 - **Tech Stack**: Next.js, Vercel AI SDK, Convex, Vapi, Monorepo, shadcn/ui, RAG
 - **Highlights**:
@@ -141,6 +181,7 @@ The 3D background is powered by `@react-three/fiber`, `@react-three/drei`, and `
 │   │   ├── sections/
 │   │   │   ├── hero.tsx        # Hero section with live status badge and CTA
 │   │   │   ├── about.tsx       # Bio and core engineering focus
+│   │   │   ├── experience.tsx  # Work experience showcase with 3D tilt
 │   │   │   ├── projects.tsx    # Dynamic project cards with individual 3D tilt
 │   │   │   ├── skills.tsx      # Comprehensive categorized skills matrix
 │   │   │   └── contact.tsx     # Contact details and direct communication links
@@ -155,6 +196,7 @@ The 3D background is powered by `@react-three/fiber`, `@react-three/drei`, and `
 │   │       ├── button.tsx
 │   │       └── card.tsx
 │   ├── data/
+│   │   ├── experience.json     # Work experience data store
 │   │   └── projects.json       # Persistent projects store
 │   ├── hooks/
 │   │   ├── use-scroll-animation.ts # Intersection observer visibility trigger
@@ -229,7 +271,7 @@ npx tsc --noEmit
 
 ## 📬 Contact & Connect
 
-**Jai Lakhmani** — Full-Stack Developer (SaaS & AI Engineering)
+**Jai Lakhmani** — Full Stack AI Engineer (SaaS & AI Engineering)
 
 - 📧 **Email**: [jailakhmani12345@gmail.com](mailto:jailakhmani12345@gmail.com)
 - 🐙 **GitHub**: [github.com](https://github.com)

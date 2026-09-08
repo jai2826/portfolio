@@ -1,0 +1,20 @@
+[
+  {
+    "id": "studentlancer",
+    "role": "Full Stack AI Engineer",
+    "company": "StudentLancer",
+    "period": "June 2026 – August 2026",
+    "technologies": [
+      "Next.js",
+      "Prisma",
+      "Better Auth",
+      "TypeScript",
+      "Full-Stack Architecture"
+    ],
+    "bullets": [
+      "Architected standardized full-stack templates (Next.js, Prisma, Better Auth) reducing developer onboarding by 40%",
+      "Enabled 15+ student developers to ship production applications 3x faster",
+      "Built reusable component libraries and backend patterns adopted across 5+ projects"
+    ]
+  }
+]
